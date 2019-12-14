@@ -54,3 +54,10 @@ target_distance = map.max_x * map.max_y // ditancia do alvo
 target_distance = map.max_x * map.max_y
 target_near = self.id		
 #endregion
+
+#region INSTANCE SPRITE
+sprite_index = spr_stay
+sprite_index0 = spr_idle0
+sprite_index1 = spr_idle1
+sprite_index2 = spr_idle2 
+#endregion

@@ -20,10 +20,13 @@
 
 #region MOVIMENTACAO
 switch state begin
+	
 	case fsm.died:
+		image_alpha = 0.4
+		image_yscale = -1 
+		
 	case fsm.idle:
-		hspeed = 0
-		vspeed = 0
+		speed = 0
 		break
 		
 	case fsm.walk:
@@ -39,22 +42,32 @@ switch state begin
 end
 #endregion
 
+#region ANIMACAO CORPO
 
-#region ANIMACAO
+if attacking begin 
+	sprite_index0 = spr_bic0
+	sprite_index1 = spr_bic1
+	sprite_index2 = spr_bic2
+end 
+
+else begin 
+	sprite_index0 = spr_idle0
+	sprite_index1 = spr_idle1
+	sprite_index2 = spr_idle2 
+
+end
+#endregion
+
+#region ANIMACAO PERNAS
 switch state begin
-	
-	case fsm.died:
-		sprite_index = spr_idle
-		break
-	
-	case fsm.idle:
-		sprite_index = spr_idle
-		break
-	
-	case fsm.walk:
-		sprite_index = spr_walk
-		break
-	
 
+	case fsm.walk:
+		sprite_index = spr_walk 
+		break
+		
+	default:
+		sprite_index = spr_stay
+		break
+		
 end
 #endregion

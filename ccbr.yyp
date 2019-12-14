@@ -39,6 +39,14 @@
             }
         },
         {
+            "Key": "07c2d0a1-2bfe-4aec-9224-ccdc03e18fe4",
+            "Value": {
+                "id": "2c7946ce-85aa-4b35-998a-554119d6af94",
+                "resourcePath": "sprites\/spr_bic1\/spr_bic1.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "1ca9217f-2aba-487c-88c4-a180a9c091e6",
             "Value": {
                 "id": "d9a06527-a2e7-47f5-918d-e79bacefb8a7",
@@ -47,10 +55,26 @@
             }
         },
         {
+            "Key": "267599d9-dee2-44e5-9677-1531ea6ee52f",
+            "Value": {
+                "id": "fe54bdfa-d9fe-4f73-af0a-7fd49733c37b",
+                "resourcePath": "sprites\/spr_idle2\/spr_idle2.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "276c557a-96ba-4a79-8ea4-6af17cdd90bf",
             "Value": {
                 "id": "8f3cb5a1-2bea-4f43-86cc-b565a288a8b0",
-                "resourcePath": "sprites\/spr_Outline\/spr_Outline.yy",
+                "resourcePath": "sprites\/spr_idle1\/spr_idle1.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "2980e8e9-9abd-4db0-ab70-8e3f1a31189b",
+            "Value": {
+                "id": "9b41b669-7a8b-44c0-a466-111dd26399b6",
+                "resourcePath": "sprites\/spr_bic0\/spr_bic0.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -60,6 +84,14 @@
                 "id": "76d37008-7dae-4f9d-a77c-6359e5f5b51e",
                 "resourcePath": "fonts\/font_SSF4\/font_SSF4.yy",
                 "resourceType": "GMFont"
+            }
+        },
+        {
+            "Key": "34cd974d-8d2c-47d6-9963-936fddca45ac",
+            "Value": {
+                "id": "b1dfc0f2-f76b-4725-92ea-1ccffc2cc5d5",
+                "resourcePath": "sprites\/spr_bic2\/spr_bic2.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -100,6 +132,14 @@
                 "id": "96a53d39-6a68-452a-8976-950cafe7bb55",
                 "resourcePath": "views\/48f334a2-cc16-40ba-b25f-0e26909f14c8.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "5f2e2331-4c37-4e94-880d-a8f2c827e464",
+            "Value": {
+                "id": "e2b4459a-b7c4-477d-b8e6-de70ac0a47d7",
+                "resourcePath": "sprites\/spr_stay\/spr_stay.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -250,7 +290,7 @@
             "Key": "e2850793-6f6c-4936-aab4-c77409e545f2",
             "Value": {
                 "id": "1f392a47-eeed-4caf-bfb4-1fdd613e7409",
-                "resourcePath": "sprites\/spr_idle\/spr_idle.yy",
+                "resourcePath": "sprites\/spr_idle0\/spr_idle0.yy",
                 "resourceType": "GMSprite"
             }
         },

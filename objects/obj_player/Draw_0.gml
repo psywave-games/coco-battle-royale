@@ -18,18 +18,19 @@
 ///
 ///////
 
+color_line = index? color: c_white
+color_body = index? c_white: color
 
-if index begin
+
+draw_sprite_ext(sprite_index0, image_index, x, y, image_xscale, image_yscale, image_angle, color_body, image_alpha)
+draw_sprite_ext(sprite_index1, image_index, x, y, image_xscale, image_yscale, image_angle, color_line, image_alpha)
+draw_sprite_ext(sprite_index2, image_index, x, y, image_xscale, image_yscale, image_angle, c_white, image_alpha)
+
+if state != fsm.died then
 	draw_sprite_ext(sprite_index, image_index, x, y, image_xscale, image_yscale, image_angle, c_white, image_alpha)
-	draw_sprite_ext(spr_Outline, image_index, x, y, image_xscale, image_yscale, image_angle, color, image_alpha)
 	
-end else begin
-	draw_sprite_ext(sprite_index, image_index, x, y, image_xscale, image_yscale, image_angle, color, image_alpha)
-	draw_sprite_ext(spr_Outline, image_index, x, y, image_xscale, image_yscale, image_angle, c_white, image_alpha)
-	draw_text(x -16, y - 30, "COCO")
-end
 
-/*DEBUG ATTACK*/
+/*DEBUG ATTACK
 if attacking begin
 	var xx = x + (sign(image_xscale) * (coco.size/2))
 	var yy = y 

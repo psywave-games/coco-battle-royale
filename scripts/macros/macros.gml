@@ -56,7 +56,7 @@ enum fsm_ia{
 
 enum coco {
 	secure = 4,
-	speed = 8,
+	speed = 6,
 	size = 32,
 	limit = 20,
 }

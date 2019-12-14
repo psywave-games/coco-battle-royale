@@ -27,3 +27,5 @@ start_in = map.start
 
 global.map_midle_x = ( map.min_x + map.max_x ) / 2
 global.map_midle_y = ( map.min_y + map.max_y ) / 2
+
+use randomize()
