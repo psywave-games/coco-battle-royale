@@ -61,3 +61,7 @@ sprite_index0 = spr_idle0
 sprite_index1 = spr_idle1
 sprite_index2 = spr_idle2 
 #endregion
+
+#region INSTANCE MISC
+rank = 20
+#endregion

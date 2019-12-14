@@ -43,12 +43,19 @@ end
 #region INPUT IA
 /// Ia ativada
 else if ia != fsm_ia.none begin
-	
+
+	/// colocar o bot para festejar
+	if game.vivos == 1 and self.state != fsm.died begin 
+		ia = fsm_ia.win 
+	end
+
 	/// Mudar comportamento
-	if random(100) < 2 then
+	else if random(100) < 2 begin
 		ia  = choose (fsm_ia.hunter, fsm_ia.escape, fsm_ia.rand, fsm_ia.sleep)
+	end
 	
-	use artificial_intelligence()
+	/// executar comportamento
+	use ia_run()
 	
 end
 #endregion
@@ -87,9 +94,9 @@ end
 	
 	/// COLISON IN TILESET
 	if tilemap_get_at_pixel(game.tileset, nextx, prevy) then
-		key_axis_x *= choose(0, reset)
+		key_axis_x *= reset
 	if tilemap_get_at_pixel(game.tileset, prevx, nexty) then
-		key_axis_y *= choose(0, reset)
+		key_axis_y *= reset
 		
 	/// OUTMAP DETECT AND KILL
 	if x > map.max_x or x < map.min_x or y > map.max_y or y < map.min_y then 

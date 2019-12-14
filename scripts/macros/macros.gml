@@ -52,11 +52,12 @@ enum fsm_ia{
 	escape,									/// Bot está fugindo
 	hunter,									/// Bot está caçando
 	rand,									/// Bot está maluco
+	win,									/// Bot está comemorando
 }
 
 enum coco {
 	secure = 4,
-	speed = 6,
+	speed = 5,
 	size = 32,
 	limit = 20,
 }

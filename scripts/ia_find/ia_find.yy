@@ -1,8 +1,8 @@
 {
-    "id": "98403c47-8d62-44d9-9f60-f9390c1af6f7",
+    "id": "e19e5835-1a2a-4410-8f9d-7ab553532b17",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "artificial_intelligence",
+    "name": "ia_find",
     "IsCompatibility": false,
     "IsDnD": false
 }

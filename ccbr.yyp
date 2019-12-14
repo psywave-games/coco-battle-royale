@@ -199,6 +199,14 @@
             }
         },
         {
+            "Key": "8d5bda45-6dc7-48d2-9276-d7e53aa84f83",
+            "Value": {
+                "id": "d0c76dee-8608-4416-99bd-0edd81d102f5",
+                "resourcePath": "views\/8d5bda45-6dc7-48d2-9276-d7e53aa84f83.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "8d9913c3-bf33-40bd-8b93-eddaa63eeeae",
             "Value": {
                 "id": "10ef0690-495c-4e74-8830-cb816ac5c58d",
@@ -218,7 +226,7 @@
             "Key": "98403c47-8d62-44d9-9f60-f9390c1af6f7",
             "Value": {
                 "id": "ad992dc5-d427-4e28-aa7c-02ff38dcdae5",
-                "resourcePath": "scripts\/artificial_intelligence\/artificial_intelligence.yy",
+                "resourcePath": "scripts\/ia_run\/ia_run.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -295,6 +303,14 @@
             }
         },
         {
+            "Key": "e19e5835-1a2a-4410-8f9d-7ab553532b17",
+            "Value": {
+                "id": "bbaefbfa-7dc3-45d4-8cb5-a1916be84597",
+                "resourcePath": "scripts\/ia_find\/ia_find.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "e2850793-6f6c-4936-aab4-c77409e545f2",
             "Value": {
                 "id": "1f392a47-eeed-4caf-bfb4-1fdd613e7409",
@@ -348,7 +364,8 @@
         "8855b664-eb11-4dce-bdb1-4b2c3deb9029",
         "a3ed50d9-6d89-46b4-9dc5-d59261f61bd2",
         "6d5ee6a5-fd71-4e6a-b2b0-cf0547fe5fc2",
-        "98403c47-8d62-44d9-9f60-f9390c1af6f7"
+        "98403c47-8d62-44d9-9f60-f9390c1af6f7",
+        "e19e5835-1a2a-4410-8f9d-7ab553532b17"
     ],
     "tutorial": ""
 }

@@ -26,7 +26,7 @@
     "option_mac_splash_png": "${options_dir}\/mac\/splash\/splash.png",
     "option_mac_start_fullscreen": false,
     "option_mac_team_id": "",
-    "option_mac_texture_page": "4096x4096",
+    "option_mac_texture_page": "256x256",
     "option_mac_version": {
         "build": 1,
         "major": 0,

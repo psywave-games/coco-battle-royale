@@ -1,7 +1,33 @@
+#region IA WIN
+if self.ia == fsm_ia.win begin
+	/// bora se exibir!!!
+	var yy = round(global.map_midle_y - self.y)
+	self.key_axis_y = abs(yy) > 5 ? sign(yy): 0
+	
+	/// comemora viado!!!
+	if random(100) < 3 begin
+		self.key_axis_x = choose (-1, 1)
+	end 
+end
+#endregion
+
+#region IA SLEEP
+if self.ia == fsm_ia.sleep and not random(6) begin
+	self.ia = fsm_ia.rand
+end
+#endregion
+
 #region IA RAND
-if self.ia == fsm_ia.rand and random(100) < 3 begin
-	self.key_axis_x = choose (0, -1, 1)
-	self.key_axis_y = choose (0, -1, 1)
+if self.ia == fsm_ia.rand begin
+	
+	use ia_find()
+	if self.target_distance < (coco.size * 3) and not random(30) then
+		self.ia = fsm_ia.hunter 
+	
+	if random(100) < 3 begin
+		self.key_axis_x = choose (0, -1, 1)
+		self.key_axis_y = choose (0, -1, 1)
+	end 
 end
 #endregion
 
@@ -17,31 +43,7 @@ end
 else if ia = fsm_ia.hunter or ia = fsm_ia.escape begin
 	/// alvo travado não é mais valido
 	if self.target_near == id or self.target_near.state == fsm.died or self.target_distance > (coco.secure * coco.size * 3) begin
-		
-		/// resetar variaveis 
-		self.target_near = id
-		self.target_distance = map.max_x * map.max_y
-			
-		/// buscar por outros alvos
-		for (target = 0; target < coco.limit; target++) begin
-			/// alvo de busca
-			var player = game.player[target]
-				
-			/// Não focar em players mortos ou si mesmo
-			if player == id or player.state == fsm.died	or player.state = fsm.none then
-				continue
-				
-			/// distancia até o player
-			var distance = distance_to_object(player)
-				
-			/// Ignorar players mais longes
-			if distance > self.target_distance then 
-				continue
-				
-			/// ATUALIZAR ALVO
-			self.target_distance = distance
-			self.target_near = player.id
-		end 
+		use ia_find()
 	end
 end
 #endregion		
@@ -58,7 +60,7 @@ if ia = fsm_ia.hunter begin
 	
 	/// Atacar jogador perto
 	var distance = distance_to_object(self.target_near)
-	self.key_attack = distance < coco.size and not random(6)
+	self.key_attack = distance < coco.size and not random(10)
 	
 	/// Virar na direção da vitima
 	if self.key_attack and abs(xx) then
@@ -76,6 +78,11 @@ end
 
 #region IA ESCAPING
 else if ia == fsm_ia.escape begin
+	
+	/// ficar agressivo no x1
+	if game.vivos <= 2 then
+		self.ia = choose( fsm_ia.hunter, fsm_ia.rand )
+
 	/// calcular por onde fugir
 	var xx = round(self.x - self.target_near.x)
 	var yy = round(self.y - self.target_near.y)

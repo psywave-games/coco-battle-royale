@@ -71,3 +71,8 @@ switch state begin
 		
 end
 #endregion
+
+#region ANIMACAO WIN COLOR
+if game.vivos == 1 and self.state != fsm.died then
+	color = make_color_rgb(irandom(255),irandom(255),irandom(255))
+#endregion	
