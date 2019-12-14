@@ -21,8 +21,9 @@
 
 
 #region FINITE STATE MACHINES
-state = fsm.none	// state player
-ia	= fsm_ia.none	// state IS
+state = fsm.none	// state Player
+ia	= fsm_ia.none	// state IA
+attacking = false	// state Attack
 #endregion 
 
 #region GENERATE COLOR
@@ -35,11 +36,11 @@ key_left = false		// [<]
 key_right = false		// [>]
 key_up = false			// [^]
 key_down = false		// [V]
-	
-key_kick0 = false		// [X]
 
 key_axis_x = 0			// [-]
 key_axis_y = 0			// [I]
+
+key_attack = false		// [X]
 #endregion 
 
 #region INSTANCE COLISON
@@ -47,4 +48,9 @@ outmap = false							// saiu do mapa
 
 target_near = id						// alvo
 target_distance = map.max_x * map.max_y // ditancia do alvo
+#endregion
+
+#region INSTANCE TARGET
+target_distance = map.max_x * map.max_y
+target_near = self.id		
 #endregion

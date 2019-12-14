@@ -16,7 +16,7 @@ end
 /// se estiver com alvo travado
 else if ia = fsm_ia.hunter or ia = fsm_ia.escape begin
 	/// alvo travado não é mais valido
-	if self.target_near == id or player.state == fsm.died or self.target_distance > (coco.secure * coco.size * 3) begin
+	if self.target_near == id or self.target_near.state == fsm.died or self.target_distance > (coco.secure * coco.size * 3) begin
 		
 		/// resetar variaveis 
 		self.target_near = id
@@ -25,14 +25,14 @@ else if ia = fsm_ia.hunter or ia = fsm_ia.escape begin
 		/// buscar por outros alvos
 		for (target = 0; target < coco.limit; target++) begin
 			/// alvo de busca
-			player = game.player[target]
+			var player = game.player[target]
 				
 			/// Não focar em players mortos ou si mesmo
-			if player == id or player.state == fsm.died	then
+			if player == id or player.state == fsm.died	or player.state = fsm.none then
 				continue
 				
 			/// distancia até o player
-			distance = distance_to_object(player)
+			var distance = distance_to_object(player)
 				
 			/// Ignorar players mais longes
 			if distance > self.target_distance then 
@@ -49,12 +49,16 @@ end
 #region IA HUNTER
 if ia = fsm_ia.hunter begin
 	/// calcular direção do jogador para se aproximar
-	xx = round(player.x - x)
-	yy = round(player.y - y)
+	xx = round(self.target_near.x - x)
+	yy = round(self.target_near.y - y)
 					
 	/// seguir suavizado
 	self.key_axis_x = abs(xx) > coco.size ? sign(xx): 0
 	self.key_axis_y = abs(yy) > coco.size ? sign(yy): 0
+	
+	/// Atacar jogador perto
+	var distance = distance_to_object(self.target_near)
+	self.key_attack = distance < coco.size and not random(6) 
 end 
 #endregion
 
@@ -68,8 +72,8 @@ end
 #region IA ESCAPING
 else if ia == fsm_ia.escape begin
 	/// calcular por onde fugir
-	xx = round(x - player.x)
-	yy = round(y - player.y)
+	xx = round(x - self.target_near.x)
+	yy = round(y - self.target_near.y)
 					
 	/// movimentar-se que nem um condenado
 	self.key_axis_x = abs(xx) > 1? sign(xx): 0

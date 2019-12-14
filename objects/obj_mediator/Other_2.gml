@@ -22,7 +22,7 @@
 
 
 #region START PLAYERS
-for ( index = 0 ; index < coco.limit ; index++ ) begin
+for (var index = 0 ; index < coco.limit ; index++ ) begin
 	
 	/// GENERATE RANDOM SPAWN
 	xx = clamp(irandom(map.max_x), map.min_x + coco.size, map.max_x - coco.size)

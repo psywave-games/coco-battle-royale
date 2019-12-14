@@ -29,4 +29,14 @@ end else begin
 	draw_text(x -16, y - 30, "COCO")
 end
 
+/*DEBUG ATTACK*/
+if attacking begin
+	var xx = x + (sign(image_xscale) * (coco.size/2))
+	var yy = y 
+	draw_set_colour(c_red);
+	draw_circle(xx, yy, 10, false);
+	draw_set_colour(c_white);
+end
+/**/
+
 

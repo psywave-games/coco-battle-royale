@@ -4,7 +4,7 @@
 #region COUNT VIVOS
 var _vivos = 0
 
-for ( index = 0 ; index < coco.limit ; index++ ) begin
+for (var index = 0 ; index < coco.limit ; index++ ) begin
 	_vivos += player[index].state != fsm.died
 end
 

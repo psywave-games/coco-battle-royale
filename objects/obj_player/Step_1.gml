@@ -19,9 +19,11 @@
 ///////
 
 
-#region STATE NONE
-if state == fsm.none then
+#region STATE NONE/DEAD
+if state == fsm.none or state == fsm.died begin
+	attack = false
 	return void
+end
 #endregion
 
 #region INPUT HUMAN
@@ -31,7 +33,7 @@ if index == 0 begin
 	key_right = keyboard_check(vk_right) || keyboard_check(ord("D"))
 	key_up = keyboard_check(vk_up) || keyboard_check(ord("W"))
 	key_down = keyboard_check(vk_down) || keyboard_check(ord("S"))
-	key_kick0 = keyboard_check_pressed(ord("X"))
+	key_attack = keyboard_check_pressed(vk_space)
 	
 	key_axis_x = key_right - key_left 
 	key_axis_y = key_down - key_up 
@@ -48,6 +50,13 @@ else if ia != fsm_ia.none begin
 	
 	use artificial_intelligence()
 	
+end
+#endregion
+
+#region ATTACK
+if not attacking and key_attack begin 
+	alarm[attack.stop] = round (room_speed / attack.time) /// acabar o ataque
+	attacking = true /// começar a atacar
 end
 #endregion
 

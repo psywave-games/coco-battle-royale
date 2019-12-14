@@ -25,11 +25,11 @@
 /// GAME MEDIADOR OBJECT
 #macro	game				obj_mediator				///	@example game.tileset
 #macro	init				event_user(0)				/// @example with game init
-#macro	prepare				alarm_set(0, room_speed)	/// @example with game prepare
+#macro	prepare				alarm_set(0, room_speed)	/// @example with game prepare						/// @example alarm[attack_stop]
 
 /// MAPA COORDENADAS
 enum map {
-	start = 5,
+	start = 0,
 	min_x = 1,
 	min_y = 1,
 	max_x = 780,
@@ -58,7 +58,11 @@ enum coco {
 	secure = 4,
 	speed = 8,
 	size = 32,
-	limit = 20
+	limit = 20,
 }
 
+enum attack{
+	time = 3,
+	stop = 1
+}
 
