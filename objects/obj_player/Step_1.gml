@@ -18,7 +18,13 @@
 ///
 ///////
 
-#region MAIN INPUT
+
+#region STATE NONE
+if state == fsm.none then
+	return void
+#endregion
+
+#region INPUT HUMAN
 if index == 0 begin
 
 	key_left = keyboard_check(vk_left) || keyboard_check(ord("A"))
@@ -32,9 +38,9 @@ if index == 0 begin
 end
 #endregion
 
-#region BOT IA INPUT 
+#region INPUT IA
 /// Ia ativada
-else if ia != fsm_ia.stoped begin
+else if ia != fsm_ia.none begin
 	
 	/// Mudar comportamento
 	if random(100) < 2 then
@@ -48,7 +54,7 @@ end
 #region COLISON
 	
 	/// RESET MODE
-	if ia == fsm_ia.escape or ia == fsm_ia.stoped begin
+	if ia == fsm_ia.escape or ia == fsm_ia.none begin
 		// bot or player stop
 		reset = 0
 	end

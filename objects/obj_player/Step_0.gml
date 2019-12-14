@@ -18,6 +18,11 @@
 ///
 ///////
 
+#region STATE NONE
+if state = fsm.none then
+	return void
+#endregion
+
 #region STATE DEAD
 if state = fsm.died then
 	return void

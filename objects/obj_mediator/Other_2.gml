@@ -21,7 +21,6 @@
 
 
 
-
 #region START PLAYERS
 for ( index = 0 ; index < coco.limit ; index++ ) begin
 	
@@ -31,15 +30,13 @@ for ( index = 0 ; index < coco.limit ; index++ ) begin
 	
 	/// PLAYER SPAWN IN CENTER
 	if not index begin 
-		xx =( map.min_x + map.max_x ) / 2
-		yy =( map.min_y + map.max_y ) / 2
+		xx = global.map_midle_x
+		yy = global.map_midle_y
 	end
-	
 	
 	player[index] = instance_create_layer(xx, yy, "Instances", obj_player) /// INSTANCIAR PLAYER
 	player[index].index = index	/// JOGADOR SABE SEU INDEX
-	
 end
-
 #endregion
 
+with game prepare

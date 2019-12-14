@@ -23,10 +23,13 @@
 #macro	void				;				/// @example return void
 
 /// GAME MEDIADOR OBJECT
-#macro	game				obj_mediator	///	@example game.tileset
+#macro	game				obj_mediator				///	@example game.tileset
+#macro	init				event_user(0)				/// @example with game init
+#macro	prepare				alarm_set(0, room_speed)	/// @example with game prepare
 
 /// MAPA COORDENADAS
 enum map {
+	start = 5,
 	min_x = 1,
 	min_y = 1,
 	max_x = 780,
@@ -36,6 +39,7 @@ enum map {
 
 /// FINITE STATE MACHINE MODES
 enum fsm {
+	none,									/// Jogador está pausado
 	died,									/// Jogador está morto
 	idle,									/// Jogador está parado
 	walk,									/// Jogador está andando
@@ -43,7 +47,7 @@ enum fsm {
 
 /// FINITE STATE MACHINE MODES (IA BOT)
 enum fsm_ia{
-	stoped,									/// Bot está desligado
+	none,									/// Bot está desligado
 	sleep,									/// Bot está parado
 	escape,									/// Bot está fugindo
 	hunter,									/// Bot está caçando

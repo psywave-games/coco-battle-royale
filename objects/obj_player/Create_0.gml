@@ -19,22 +19,32 @@
 ///////
 
 
-state = fsm.idle
-ia	= fsm_ia.stoped
 
+#region FINITE STATE MACHINES
+state = fsm.none	// state player
+ia	= fsm_ia.none	// state IS
+#endregion 
+
+#region GENERATE COLOR
+// selecionar cor
 color = make_color_rgb(irandom(255),irandom(255),irandom(255))
+#endregion
 
-key_left = false
-key_right = false
-key_up = false
-key_down = false
+#region INSTANCE CONTROLLS
+key_left = false		// [<]
+key_right = false		// [>]
+key_up = false			// [^]
+key_down = false		// [V]
 	
-key_kick0 = false
+key_kick0 = false		// [X]
 
-key_axis_x = 0
-key_axis_y = 0
+key_axis_x = 0			// [-]
+key_axis_y = 0			// [I]
+#endregion 
 
-outmap = false
+#region INSTANCE COLISON
+outmap = false							// saiu do mapa
 
-target_near = id
-target_distance = map.max_x * map.max_y
+target_near = id						// alvo
+target_distance = map.max_x * map.max_y // ditancia do alvo
+#endregion

@@ -22,3 +22,8 @@
 tileset = layer_tilemap_get_id(layer_get_id("Tiles"))
 player = array_create(coco.limit)
 vivos = coco.limit
+
+start_in = map.start
+
+global.map_midle_x = ( map.min_x + map.max_x ) / 2
+global.map_midle_y = ( map.min_y + map.max_y ) / 2
