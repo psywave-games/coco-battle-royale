@@ -143,6 +143,14 @@
             }
         },
         {
+            "Key": "611806f4-57ae-47b8-8d9d-4be86f1ceace",
+            "Value": {
+                "id": "2f60eb80-b437-42eb-8bd9-24809141cf40",
+                "resourcePath": "sprites\/spr_tileset\/spr_tileset.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "6b3a0559-518c-4e1d-a259-b316b4fcb7a1",
             "Value": {
                 "id": "a1a53d75-14eb-4ce8-8950-4ba13c0b20ce",

@@ -29,7 +29,7 @@
 
 /// MAPA COORDENADAS
 enum map {
-	start = 0,
+	start = 5,
 	min_x = 1,
 	min_y = 1,
 	max_x = 780,

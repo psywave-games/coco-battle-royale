@@ -49,8 +49,8 @@ end
 #region IA HUNTER
 if ia = fsm_ia.hunter begin
 	/// calcular direção do jogador para se aproximar
-	xx = round(self.target_near.x - x)
-	yy = round(self.target_near.y - y)
+	var xx = round(self.target_near.x - self.x)
+	var yy = round(self.target_near.y - self.y)
 					
 	/// seguir suavizado
 	self.key_axis_x = abs(xx) > coco.size ? sign(xx): 0
@@ -58,7 +58,12 @@ if ia = fsm_ia.hunter begin
 	
 	/// Atacar jogador perto
 	var distance = distance_to_object(self.target_near)
-	self.key_attack = distance < coco.size and not random(6) 
+	self.key_attack = distance < coco.size and not random(6)
+	
+	/// Virar na direção da vitima
+	if self.key_attack and abs(xx) then
+		image_xscale = sign(xx)
+		
 end 
 #endregion
 
@@ -72,8 +77,8 @@ end
 #region IA ESCAPING
 else if ia == fsm_ia.escape begin
 	/// calcular por onde fugir
-	xx = round(x - self.target_near.x)
-	yy = round(y - self.target_near.y)
+	var xx = round(self.x - self.target_near.x)
+	var yy = round(self.y - self.target_near.y)
 					
 	/// movimentar-se que nem um condenado
 	self.key_axis_x = abs(xx) > 1? sign(xx): 0

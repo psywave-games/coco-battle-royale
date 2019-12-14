@@ -5,11 +5,11 @@ draw_text(x,y, "Vivos: " + string(vivos))
 
 
 #region PREPARE LOGO
-if start_in begin 
+if start_in begin
 	draw_text(
 		global.map_midle_x,
 		global.map_midle_y,
-		"Comeca em " + string (start_in)
+		"Comeca em " + string (start_in) + "..."
 	)
 end
 #endregion

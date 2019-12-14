@@ -17,7 +17,7 @@ for (var attacker = 0 ; attacker < coco.limit ; attacker++ ) begin
 		var yy = player[attacker].y 		
 				
 		//golpe acertado
-		if collision_circle(xx, yy, 16, player[victim], false, false) begin
+		if collision_circle(xx, yy, 19, player[victim], false, false) begin
 			player[victim].state = fsm.died
 
 		end

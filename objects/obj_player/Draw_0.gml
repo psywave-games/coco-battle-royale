@@ -30,14 +30,4 @@ if state != fsm.died then
 	draw_sprite_ext(sprite_index, image_index, x, y, image_xscale, image_yscale, image_angle, c_white, image_alpha)
 	
 
-/*DEBUG ATTACK
-if attacking begin
-	var xx = x + (sign(image_xscale) * (coco.size/2))
-	var yy = y 
-	draw_set_colour(c_red);
-	draw_circle(xx, yy, 10, false);
-	draw_set_colour(c_white);
-end
-/**/
-
 

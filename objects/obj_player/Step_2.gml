@@ -44,7 +44,7 @@ end
 
 #region ANIMACAO CORPO
 
-if attacking begin 
+if attacking and state != fsm.died begin 
 	sprite_index0 = spr_bic0
 	sprite_index1 = spr_bic1
 	sprite_index2 = spr_bic2
