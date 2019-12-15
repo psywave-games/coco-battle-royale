@@ -11,7 +11,7 @@
 
 <br>
 
-[Gameplay] |
+[Gameplay](https://cdn.discordapp.com/attachments/268884978132058112/655579336056897536/compressed-coco.mp4) |
 --------- | 
 [![gif](https://media.discordapp.net/attachments/268884978132058112/655588396953108490/gameplay-min.gif)](https://media.discordapp.net/attachments/268884978132058112/655586118133088256/gameplay.gif) |
 
