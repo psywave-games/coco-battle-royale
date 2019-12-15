@@ -45,6 +45,7 @@ key_attack = false		// [X]
 
 #region INSTANCE COLISON
 outmap = false							// saiu do mapa
+colison = false
 
 target_near = id						// alvo
 target_distance = map.max_x * map.max_y // ditancia do alvo

@@ -1,6 +1,9 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+draw_set_halign(fa_left);
+draw_set_valign(fa_bottom);
+
 #region TEXTO: "Vivos: "
 if game.vivos > 1 then 
 	draw_text(x,y, "Cocks: " + string(vivos))
@@ -9,7 +12,7 @@ if game.vivos > 1 then
 #region TEXTO: "Comeca em x...
 if start_in begin
 	draw_text(
-		global.map_midle_x,
+		global.map_midle_x + coco.size,
 		global.map_midle_y,
 		"starting at " + string (start_in) + "..."
 	)
@@ -19,9 +22,6 @@ end
 #region TEXTO: "#x You were fried."
 if game.player[0].state == fsm.died and game.vivos == 1 begin
 	draw_set_halign(fa_center);
-	draw_set_valign(fa_middle);
-
-
 	draw_text_transformed(
 		global.map_midle_x,
 		global.map_midle_y, 
@@ -36,9 +36,6 @@ end
 #region TEXTO: "#1 Ultimate Hot Chicken!!"
 if game.player[0].state != fsm.died and game.vivos == 1 begin
 	draw_set_halign(fa_center);
-	draw_set_valign(fa_middle);
-
-
 	draw_text_transformed(
 		global.map_midle_x,
 		global.map_midle_y, 

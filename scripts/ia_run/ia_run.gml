@@ -1,13 +1,19 @@
 #region IA WIN
 if self.ia == fsm_ia.win begin
 	/// bora se exibir!!!
-	var yy = round(global.map_midle_y - self.y)
+	var yy = round(global.map_midle_y - self.y + coco.size)
 	self.key_axis_y = abs(yy) > 5 ? sign(yy): 0
 	
 	/// comemora viado!!!
 	if random(100) < 3 begin
 		self.key_axis_x = choose (-1, 1)
 	end 
+end
+#endregion
+
+#region IA COLISON
+else if colison begin 
+	ia = choose(fsm_ia.rand, fsm_ia.hunter)
 end
 #endregion
 

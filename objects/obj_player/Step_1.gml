@@ -86,17 +86,21 @@ end
 	nextx = x + (key_axis_x * coco.size)
 	nexty =	y + (key_axis_y * coco.size)
 	
-	/// COLISON IN BORDER MAP
-	if nextx >= map.max_x or nextx <= map.min_x then
-		key_axis_x *= reset
-	if nexty >= map.max_y or nexty <= map.min_y then
-		key_axis_y *= reset
+
+	/// COLISON RESET 
+	colison = false
 	
 	/// COLISON IN TILESET
-	if tilemap_get_at_pixel(game.tileset, nextx, prevy) then
+	if tilemap_get_at_pixel(game.tileset, nextx, prevy) begin
+		colison = true
 		key_axis_x *= reset
-	if tilemap_get_at_pixel(game.tileset, prevx, nexty) then
+	end	
+		
+	if tilemap_get_at_pixel(game.tileset, prevx, nexty) begin
+		colison = true
 		key_axis_y *= reset
+		
+	end	
 		
 	/// OUTMAP DETECT AND KILL
 	if x > map.max_x or x < map.min_x or y > map.max_y or y < map.min_y then 

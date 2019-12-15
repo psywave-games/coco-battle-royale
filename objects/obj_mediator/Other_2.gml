@@ -24,15 +24,18 @@
 #region START PLAYERS
 for (var index = 0 ; index < coco.limit ; index++ ) begin
 	
-	/// GENERATE RANDOM SPAWN
-	xx = clamp(irandom(map.max_x), map.min_x + coco.size, map.max_x - coco.size)
-	yy = clamp(irandom(map.max_y), map.min_y + coco.size, map.max_y - coco.size)
-	
-	/// PLAYER SPAWN IN CENTER
-	if not index begin 
-		xx = global.map_midle_x
-		yy = global.map_midle_y
+	var xx = global.map_midle_x
+	var yy = global.map_midle_y
+	 
+	/// GENERATE RANDOM SPAWN DISTANCE OFF PLAYER
+	if index begin 
+		do begin
+			xx = clamp(irandom(map.max_x), map.min_x + coco.size, map.max_x - coco.size)
+			yy = clamp(irandom(map.max_y), map.min_y + coco.size, map.max_y - coco.size)
+			near = instance_nearest(xx, yy, obj_player)
+		end until point_distance(near.x, near.y, xx, yy) > (coco.size * 3)
 	end
+	
 	
 	player[index] = instance_create_layer(xx, yy, "Instances", obj_player) /// INSTANCIAR PLAYER
 	player[index].index = index	/// JOGADOR SABE SEU INDEX
