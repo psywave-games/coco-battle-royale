@@ -79,14 +79,6 @@
             }
         },
         {
-            "Key": "31bff57a-4ebb-44d9-9eea-4a4e9574f526",
-            "Value": {
-                "id": "76d37008-7dae-4f9d-a77c-6359e5f5b51e",
-                "resourcePath": "fonts\/font_SSF4\/font_SSF4.yy",
-                "resourceType": "GMFont"
-            }
-        },
-        {
             "Key": "34cd974d-8d2c-47d6-9963-936fddca45ac",
             "Value": {
                 "id": "b1dfc0f2-f76b-4725-92ea-1ccffc2cc5d5",
