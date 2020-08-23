@@ -1,23 +1,14 @@
-![coco-battle-royale](https://media.discordapp.net/attachments/268884978132058112/655578897684889610/c56779bd07bc5c72ffb5cb128a0aee28.png?width=930&height=81)
-> by Rodrigo Dornelles, Bernas Veroli, Thiago Reis, Lucas Leite
+Cococo Battle Royale
+=====================
+[![Latest Stable Version](https://img.shields.io/github/v/release/psywave-games/coco-battle-royale)](https://github.com/psywave-games/coco-battle-royale/releases) [![Demo:GameJolt](https://img.shields.io/badge/Demo-GameJolt-green)](https://rodrigodornelles.gamejolt.io/coco-battle-royale) [![License](https://img.shields.io/github/license/psywave-games/coco-battle-royale)](https://github.com/psywave-games/coco-battle-royale/blob/master/LICENSE) [![Engine:GamerMakerStudio2](https://img.shields.io/badge/Engine-GMS%202.2.5-orange)](https://www.yoyogames.com) 
 
-**Play** https://games-rodrigo.dornelles.me/coco-battle-royale/
+## About ##
+this was our first game developed for a small gamejam and it was still a winner.
 
-<br>
+## GamePlay ##
+| Move | Attack | Reset |
+| ---- | -----  | ----- |
+| <kbd>W</kbd> <kbd>A</kbd> <kbd>S</kbd> <kbd>D</kbd>| <kbd>space bar</kbd> | <kbd>return ↵</kbd> |
 
-## About
- * **EN** design for game jam **Indietopia** _(1 day)_, training Game JaaJ Andrew Young.
- * **PT** projeto na game jam **Indietopia** _(1 dia)_ , treinanamento para Game JaaJ de André Young.
-
-<br>
-
-[Gameplay](https://cdn.discordapp.com/attachments/268884978132058112/655579336056897536/compressed-coco.mp4) |
---------- | 
-[![gif](https://media.discordapp.net/attachments/268884978132058112/655588396953108490/gameplay-min.gif)](https://media.discordapp.net/attachments/268884978132058112/655586118133088256/gameplay.gif) |
-
-Inputs | Commands | 
------- | :------  |
-`[W]` `[A]` `[S]` `[D]` | Movement | 
-`[SPACE]` |  Attack |
-`[ENTER]` | Restart |  
-
+| [![gameplay](https://cdn.discordapp.com/attachments/746930129380573276/746930218819780708/cbr-gameplay.gif)](https://rodrigodornelles.gamejolt.io/coco-battle-royale) |
+| - |
